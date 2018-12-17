@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+ form#new_todo
+  .input-group{
+    width: 100%;
+    display: inline-flex;
+    }
+
+  .form-control:focus{
+    z-index: 2;
+    }
+
+  .form-control:focus input[type=text]{
+    height: auto;
+    border-radius: 0;
+    }
+
+  button[type=submit]{
+    width: 140px;
+    border-radius: 0;
+    }
+
+.list-group-item{
+  width: 100%;
+  display: inline-flex;
+  }
+
+  .list-group-item first-child{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    }
+
+  .completed
+    .todo-description span{
+      color: #a9a9a9;
+      text-decoration: line-through;
+      }
+
+  .todo-completed{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 7px;
+    }
+
+  .todo-list-description, .todo-description{
+    width: 90%;
+    margin-left: 10px;
+    line-height: 2.45em;
+    }
+
+  .todo-list-buttons, .todo-buttons{
+    margin-top: 5px;
+    }
